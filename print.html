@@ -394,7 +394,7 @@ rule2 = ...
 </code></pre>
 <p>Where the value is whatever the special configuration of that rule is. You can learn these on the lints specific page in the <a href="cli/../lints/index.html">list of lints</a>. For example, if we wanted to allow empty if branches if the contents contain comments, then we would write:</p>
 <pre><code class="language-toml">[config]
-empty_if = { comments_count = false }
+empty_if = { comments_count = true }
 </code></pre>
 <h2><a class="header" href="#setting-the-standard-library" id="setting-the-standard-library">Setting the standard library</a></h2>
 <p>Many lints use standard libraries for either verifying their correct usage or for knowing that variables exist where they otherwise wouldn't.</p>
