@@ -5,22 +5,36 @@
         <meta charset="UTF-8">
         <title>Luacheck Comparison - selene Documentation</title>
         
+        
+
+
+        <!-- Custom HTML head -->
+        
+
 
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
         <link rel="shortcut icon" href="favicon.png">
+        
         <link rel="stylesheet" href="css/variables.css">
         <link rel="stylesheet" href="css/general.css">
         <link rel="stylesheet" href="css/chrome.css">
+        
         <link rel="stylesheet" href="css/print.css" media="print">
+        
 
         <!-- Fonts -->
         <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500" rel="stylesheet" type="text/css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
 
         <!-- Highlight.js Stylesheets -->
         <link rel="stylesheet" href="highlight.css">
@@ -36,7 +50,7 @@
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
             var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "light";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
@@ -80,8 +94,8 @@
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div id="sidebar-scrollbox" class="sidebar-scrollbox">
-                <ol class="chapter"><li class="expanded "><a href="selene.html"><strong aria-hidden="true">1.</strong> selene</a></li><li class="expanded "><a href="motivation.html"><strong aria-hidden="true">2.</strong> Motivation</a></li><li class="expanded "><a href="luacheck.html" class="active"><strong aria-hidden="true">3.</strong> Luacheck Comparison</a></li><li class="expanded "><a href="cli/index.html"><strong aria-hidden="true">4.</strong> Command Line Interface</a></li><li><ol class="section"><li class="expanded "><a href="cli/installation.html"><strong aria-hidden="true">4.1.</strong> Installation</a></li><li class="expanded "><a href="cli/usage.html"><strong aria-hidden="true">4.2.</strong> CLI Usage</a></li></ol></li><li class="expanded "><a href="usage/index.html"><strong aria-hidden="true">5.</strong> Usage</a></li><li><ol class="section"><li class="expanded "><a href="usage/configuration.html"><strong aria-hidden="true">5.1.</strong> Configuration</a></li><li class="expanded "><a href="usage/filtering.html"><strong aria-hidden="true">5.2.</strong> Filtering</a></li><li class="expanded "><a href="usage/std.html"><strong aria-hidden="true">5.3.</strong> Standard Library Format</a></li></ol></li><li class="expanded "><a href="roblox.html"><strong aria-hidden="true">6.</strong> Roblox Guide</a></li><li class="expanded "><a href="contributing.html"><strong aria-hidden="true">7.</strong> Contributing</a></li><li class="expanded "><a href="lints/index.html"><strong aria-hidden="true">8.</strong> Lints</a></li><li><ol class="section"><li class="expanded "><a href="lints/almost_swapped.html"><strong aria-hidden="true">8.1.</strong> almost_swapped</a></li><li class="expanded "><a href="lints/divide_by_zero.html"><strong aria-hidden="true">8.2.</strong> divide_by_zero</a></li><li class="expanded "><a href="lints/empty_if.html"><strong aria-hidden="true">8.3.</strong> empty_if</a></li><li class="expanded "><a href="lints/global_usage.html"><strong aria-hidden="true">8.4.</strong> global_usage</a></li><li class="expanded "><a href="lints/if_same_then_else.html"><strong aria-hidden="true">8.5.</strong> if_same_then_else</a></li><li class="expanded "><a href="lints/ifs_same_cond.html"><strong aria-hidden="true">8.6.</strong> ifs_same_cond</a></li><li class="expanded "><a href="lints/multiple_statements.html"><strong aria-hidden="true">8.7.</strong> multiple_statements</a></li><li class="expanded "><a href="lints/parenthese_conditions.html"><strong aria-hidden="true">8.8.</strong> parenthese_conditions</a></li><li class="expanded "><a href="lints/roblox_incorrect_color3_new_bounds.html"><strong aria-hidden="true">8.9.</strong> roblox_incorrect_color3_new_bounds</a></li><li class="expanded "><a href="lints/roblox_incorrect_roact_usage.html"><strong aria-hidden="true">8.10.</strong> roblox_incorrect_roact_usage</a></li><li class="expanded "><a href="lints/shadowing.html"><strong aria-hidden="true">8.11.</strong> shadowing</a></li><li class="expanded "><a href="lints/incorrect_standard_library_use.html"><strong aria-hidden="true">8.12.</strong> incorrect_standard_library_use</a></li><li class="expanded "><a href="lints/suspicious_reverse_loop.html"><strong aria-hidden="true">8.13.</strong> suspicious_reverse_loop</a></li><li class="expanded "><a href="lints/type_check_inside_call.html"><strong aria-hidden="true">8.14.</strong> type_check_inside_call</a></li><li class="expanded "><a href="lints/unbalanced_assignments.html"><strong aria-hidden="true">8.15.</strong> unbalanced_assignments</a></li><li class="expanded "><a href="lints/undefined_variable.html"><strong aria-hidden="true">8.16.</strong> undefined_variable</a></li><li class="expanded "><a href="lints/unscoped_variables.html"><strong aria-hidden="true">8.17.</strong> unscoped_variables</a></li><li class="expanded "><a href="lints/unused_variable.html"><strong aria-hidden="true">8.18.</strong> unused_variable</a></li></ol></li></ol>
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="selene.html"><strong aria-hidden="true">1.</strong> selene</a></li><li class="chapter-item expanded "><a href="motivation.html"><strong aria-hidden="true">2.</strong> Motivation</a></li><li class="chapter-item expanded "><a href="luacheck.html" class="active"><strong aria-hidden="true">3.</strong> Luacheck Comparison</a></li><li class="chapter-item expanded "><a href="cli/index.html"><strong aria-hidden="true">4.</strong> Command Line Interface</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="cli/installation.html"><strong aria-hidden="true">4.1.</strong> Installation</a></li><li class="chapter-item expanded "><a href="cli/usage.html"><strong aria-hidden="true">4.2.</strong> CLI Usage</a></li></ol></li><li class="chapter-item expanded "><a href="usage/index.html"><strong aria-hidden="true">5.</strong> Usage</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="usage/configuration.html"><strong aria-hidden="true">5.1.</strong> Configuration</a></li><li class="chapter-item expanded "><a href="usage/filtering.html"><strong aria-hidden="true">5.2.</strong> Filtering</a></li><li class="chapter-item expanded "><a href="usage/std.html"><strong aria-hidden="true">5.3.</strong> Standard Library Format</a></li></ol></li><li class="chapter-item expanded "><a href="roblox.html"><strong aria-hidden="true">6.</strong> Roblox Guide</a></li><li class="chapter-item expanded "><a href="contributing.html"><strong aria-hidden="true">7.</strong> Contributing</a></li><li class="chapter-item expanded "><a href="lints/index.html"><strong aria-hidden="true">8.</strong> Lints</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="lints/almost_swapped.html"><strong aria-hidden="true">8.1.</strong> almost_swapped</a></li><li class="chapter-item expanded "><a href="lints/divide_by_zero.html"><strong aria-hidden="true">8.2.</strong> divide_by_zero</a></li><li class="chapter-item expanded "><a href="lints/empty_if.html"><strong aria-hidden="true">8.3.</strong> empty_if</a></li><li class="chapter-item expanded "><a href="lints/global_usage.html"><strong aria-hidden="true">8.4.</strong> global_usage</a></li><li class="chapter-item expanded "><a href="lints/if_same_then_else.html"><strong aria-hidden="true">8.5.</strong> if_same_then_else</a></li><li class="chapter-item expanded "><a href="lints/ifs_same_cond.html"><strong aria-hidden="true">8.6.</strong> ifs_same_cond</a></li><li class="chapter-item expanded "><a href="lints/multiple_statements.html"><strong aria-hidden="true">8.7.</strong> multiple_statements</a></li><li class="chapter-item expanded "><a href="lints/parenthese_conditions.html"><strong aria-hidden="true">8.8.</strong> parenthese_conditions</a></li><li class="chapter-item expanded "><a href="lints/roblox_incorrect_color3_new_bounds.html"><strong aria-hidden="true">8.9.</strong> roblox_incorrect_color3_new_bounds</a></li><li class="chapter-item expanded "><a href="lints/roblox_incorrect_roact_usage.html"><strong aria-hidden="true">8.10.</strong> roblox_incorrect_roact_usage</a></li><li class="chapter-item expanded "><a href="lints/shadowing.html"><strong aria-hidden="true">8.11.</strong> shadowing</a></li><li class="chapter-item expanded "><a href="lints/incorrect_standard_library_use.html"><strong aria-hidden="true">8.12.</strong> incorrect_standard_library_use</a></li><li class="chapter-item expanded "><a href="lints/suspicious_reverse_loop.html"><strong aria-hidden="true">8.13.</strong> suspicious_reverse_loop</a></li><li class="chapter-item expanded "><a href="lints/type_check_inside_call.html"><strong aria-hidden="true">8.14.</strong> type_check_inside_call</a></li><li class="chapter-item expanded "><a href="lints/unbalanced_assignments.html"><strong aria-hidden="true">8.15.</strong> unbalanced_assignments</a></li><li class="chapter-item expanded "><a href="lints/undefined_variable.html"><strong aria-hidden="true">8.16.</strong> undefined_variable</a></li><li class="chapter-item expanded "><a href="lints/unscoped_variables.html"><strong aria-hidden="true">8.17.</strong> unscoped_variables</a></li><li class="chapter-item expanded "><a href="lints/unused_variable.html"><strong aria-hidden="true">8.18.</strong> unused_variable</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -90,37 +104,38 @@
 
             <div class="page">
                 
-                <div id="menu-bar" class="menu-bar">
-                    <div id="menu-bar-sticky-container">
-                        <div class="left-buttons">
-                            <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                                <i class="fa fa-bars"></i>
-                            </button>
-                            <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                                <i class="fa fa-paint-brush"></i>
-                            </button>
-                            <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                                <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                                <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                            </ul>
-                            
-                            <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            
-                        </div>
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
 
-                        <h1 class="menu-title">selene Documentation</h1>
+                    <h1 class="menu-title">selene Documentation</h1>
 
-                        <div class="right-buttons">
-                            <a href="print.html" title="Print this book" aria-label="Print this book">
-                                <i id="print-button" class="fa fa-print"></i>
-                            </a>
-                            
-                        </div>
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
                     </div>
                 </div>
 
@@ -237,13 +252,13 @@ math.pi()
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
                 
-                    <a href="motivation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="motivation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
                 
 
                 
-                    <a href="cli/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="cli/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
                 
@@ -256,10 +271,10 @@ math.pi()
         
 
         
-        
+
         
         <script type="text/javascript">
-            window.playpen_copyable = true;
+            window.playground_copyable = true;
         </script>
         
 
