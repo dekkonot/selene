@@ -174,10 +174,10 @@
 <li><strong>Interested in contributing to selene's codebase?</strong> Read the <a href="./contributing.html">contribution guide</a>.</li>
 <li><strong>Want to discuss selene or get help?</strong> Join the <a href="https://discord.gg/mhtGUS8">Roblox OS Community Discord</a>. Note: selene is not Roblox exclusive, but it started its life for Roblox development.</li>
 </ul>
-<h3><a class="header" href="#license" id="license">License</a></h3>
+<h2><a class="header" href="#license" id="license">License</a></h2>
 <p>selene and all its source code are licensed under the <a href="https://www.mozilla.org/MPL/2.0/">Mozilla Public License 2.0</a>.</p>
 <h1><a class="header" href="#motivation" id="motivation">Motivation</a></h1>
-<h3><a class="header" href="#because-bugs" id="because-bugs">Because bugs</a></h3>
+<h2><a class="header" href="#because-bugs" id="because-bugs">Because bugs</a></h2>
 <p>When writing any code, it's very easy to make silly mistakes that end up introducing bugs. A lot of the time, these bugs are hard to track down and debug, and sometimes are even harder to replicate.</p>
 <p>This risk is made ever more real because of the generally lax nature of Lua. Incorrect code is regularly passed off and isn't noticed until something breaks at runtime. Sometimes you'll get a clear error message, and will have to spend time going back, fixing the code, and making sure you actually fixed it. Other times, the effects are more hidden, and instead of getting an error your code will just pass through along, in an incorrect state.</p>
 <p>Take, for example, this code:</p>
@@ -249,7 +249,7 @@ end
 <p>selene is not the first Lua linter. The main inspiration behind selene is <a href="https://luacheck.readthedocs.io/en/stable/">luacheck</a>. However, the two have very little in common besides inception.</p>
 <ul>
 <li>selene is actively maintained, while at the time of writing luacheck's last commit was in October 2018.</li>
-<li>selene is written in Rust, while luacheck is written in Lua. In practice, this means that selene is much faster than luacheck while also being able to easily take advantage of features luacheck cannot because of the difficulty of using depenedencies in Lua.</li>
+<li>selene is written in Rust, while luacheck is written in Lua. In practice, this means that selene is much faster than luacheck while also being able to easily take advantage of features luacheck cannot because of the difficulty of using dependencies in Lua.</li>
 <li>selene is multithreaded, again leading to significantly better performance.</li>
 <li>selene has rich output, while luacheck has basic output.</li>
 </ul>
@@ -492,7 +492,7 @@ error[invalid_lint_filter]: global filters must come before any code
 </code></pre>
 <h1><a class="header" href="#standard-library-format" id="standard-library-format">Standard Library Format</a></h1>
 <p>selene provides a robust standard library format to allow for use with environments other than vanilla Lua. Standard libraries are defined in the form of <a href="https://github.com/toml-lang/toml">TOML</a> files.</p>
-<h1><a class="header" href="#examples" id="examples">Examples</a></h1>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
 <p>For examples of the standard library format, see:</p>
 <ul>
 <li><a href="https://github.com/Kampfkarren/selene/blob/master/selene-lib/default_std/lua51.toml"><code>lua51.toml</code></a> - The default standard library for Lua 5.1</li>
@@ -586,7 +586,7 @@ property = true
 removed = true
 </code></pre>
 <p>Used when your standard library is based off another, and your library removes something from the original.</p>
-<h1><a class="header" href="#structs" id="structs">Structs</a></h1>
+<h2><a class="header" href="#structs" id="structs">Structs</a></h2>
 <p>Structs are used in places such as Roblox Instances. Every Instance in Roblox, for example, declares a <code>:GetChildren()</code> method. We don't want to have to define this everywhere an Instance is declared globally, so instead we just define it once in a struct.</p>
 <p>Structs are defined as fields of <code>[selene.structs]</code>. Any fields they have will be used for instances of that struct. For example, the Roblox standard library has the struct:</p>
 <pre><code class="language-toml">[selene.structs.Event.Connect]
@@ -600,7 +600,7 @@ type = &quot;function&quot;
 struct = &quot;Event&quot;
 </code></pre>
 <p>...and selene will know that <code>workspace.Changed:Connect(callback)</code> is valid, but <code>workspace.Changed:RandomNameHere()</code> is not.</p>
-<h1><a class="header" href="#wildcards" id="wildcards">Wildcards</a></h1>
+<h2><a class="header" href="#wildcards" id="wildcards">Wildcards</a></h2>
 <p>Fields can specify requirements if a field is referenced that is not explicitly named. For example, in Roblox, instances can have arbitrary fields of other instances (<code>workspace.Baseplate</code> indexes an instance named Baseplate inside <code>workspace</code>, but <code>Baseplate</code> is nowhere in the Roblox API).</p>
 <p>We can specify this behavior by using the special <code>&quot;*&quot;</code> field.</p>
 <pre><code class="language-toml">[workspace.&quot;*&quot;]
@@ -913,7 +913,7 @@ while x do
 Roact.createElement(&quot;BadClass&quot;, {})
 </code></pre>
 <h2><a class="header" href="#remarks-3" id="remarks-3">Remarks</a></h2>
-<p>This lint is naiive and makes several assumptions about the way you write your code. The assumptions are based on idiomatic Roact.</p>
+<p>This lint is naive and makes several assumptions about the way you write your code. The assumptions are based on idiomatic Roact.</p>
 <ol>
 <li>It assumes you are either calling <code>Roact.createElement</code> directly or creating a local variable that's assigned to <code>Roact.createElement</code>.</li>
 <li>It assumes if you are using a local variable, you're not reassigning it.</li>
@@ -959,7 +959,7 @@ end
 <h2><a class="header" href="#what-it-does-13" id="what-it-does-13">What it does</a></h2>
 <p>Checks for <code>type(foo == &quot;type&quot;)</code>, instead of <code>type(foo) == &quot;type&quot;</code>.</p>
 <h2><a class="header" href="#why-this-is-bad-12" id="why-this-is-bad-12">Why this is bad</a></h2>
-<p>This will always return <code>&quot;boolean&quot;</code>, and is undoubtably not what you intended to write.</p>
+<p>This will always return <code>&quot;boolean&quot;</code>, and is undoubtedly not what you intended to write.</p>
 <h2><a class="header" href="#example-13" id="example-13">Example</a></h2>
 <pre><code class="language-lua">return type(foo == &quot;number&quot;)
 </code></pre>
@@ -1010,7 +1010,7 @@ prinnt(&quot;hello, world!&quot;)
 </code></pre>
 <h2><a class="header" href="#remarks-7" id="remarks-7">Remarks</a></h2>
 <p>If you are using a different standard library where a global variable is defined that selene isn't picking up on, create a <a href="lints/../cli/std.html">standard library</a> that specifies it.</p>
-<h1><a class="header" href="#unused_variable" id="unused_variable">unused_variable</a></h1>
+<h1><a class="header" href="#unscoped_variables" id="unscoped_variables">unscoped_variables</a></h1>
 <h2><a class="header" href="#what-it-does-16" id="what-it-does-16">What it does</a></h2>
 <p>Checks for variables that are unscoped (don't have a local variable attached).</p>
 <h2><a class="header" href="#why-this-is-bad-15" id="why-this-is-bad-15">Why this is bad</a></h2>
@@ -1020,7 +1020,7 @@ prinnt(&quot;hello, world!&quot;)
 <h2><a class="header" href="#example-16" id="example-16">Example</a></h2>
 <pre><code class="language-lua">baz = 3
 </code></pre>
-<h1><a class="header" href="#unused_variable-1" id="unused_variable-1">unused_variable</a></h1>
+<h1><a class="header" href="#unused_variable" id="unused_variable">unused_variable</a></h1>
 <h2><a class="header" href="#what-it-does-17" id="what-it-does-17">What it does</a></h2>
 <p>Checks for variables that are unused.</p>
 <h2><a class="header" href="#why-this-is-bad-16" id="why-this-is-bad-16">Why this is bad</a></h2>

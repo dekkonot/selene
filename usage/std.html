@@ -165,7 +165,7 @@
                     <main>
                         <h1><a class="header" href="#standard-library-format" id="standard-library-format">Standard Library Format</a></h1>
 <p>selene provides a robust standard library format to allow for use with environments other than vanilla Lua. Standard libraries are defined in the form of <a href="https://github.com/toml-lang/toml">TOML</a> files.</p>
-<h1><a class="header" href="#examples" id="examples">Examples</a></h1>
+<h2><a class="header" href="#examples" id="examples">Examples</a></h2>
 <p>For examples of the standard library format, see:</p>
 <ul>
 <li><a href="https://github.com/Kampfkarren/selene/blob/master/selene-lib/default_std/lua51.toml"><code>lua51.toml</code></a> - The default standard library for Lua 5.1</li>
@@ -259,7 +259,7 @@ property = true
 removed = true
 </code></pre>
 <p>Used when your standard library is based off another, and your library removes something from the original.</p>
-<h1><a class="header" href="#structs" id="structs">Structs</a></h1>
+<h2><a class="header" href="#structs" id="structs">Structs</a></h2>
 <p>Structs are used in places such as Roblox Instances. Every Instance in Roblox, for example, declares a <code>:GetChildren()</code> method. We don't want to have to define this everywhere an Instance is declared globally, so instead we just define it once in a struct.</p>
 <p>Structs are defined as fields of <code>[selene.structs]</code>. Any fields they have will be used for instances of that struct. For example, the Roblox standard library has the struct:</p>
 <pre><code class="language-toml">[selene.structs.Event.Connect]
@@ -273,7 +273,7 @@ type = &quot;function&quot;
 struct = &quot;Event&quot;
 </code></pre>
 <p>...and selene will know that <code>workspace.Changed:Connect(callback)</code> is valid, but <code>workspace.Changed:RandomNameHere()</code> is not.</p>
-<h1><a class="header" href="#wildcards" id="wildcards">Wildcards</a></h1>
+<h2><a class="header" href="#wildcards" id="wildcards">Wildcards</a></h2>
 <p>Fields can specify requirements if a field is referenced that is not explicitly named. For example, in Roblox, instances can have arbitrary fields of other instances (<code>workspace.Baseplate</code> indexes an instance named Baseplate inside <code>workspace</code>, but <code>Baseplate</code> is nowhere in the Roblox API).</p>
 <p>We can specify this behavior by using the special <code>&quot;*&quot;</code> field.</p>
 <pre><code class="language-toml">[workspace.&quot;*&quot;]
